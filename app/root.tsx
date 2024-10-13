@@ -51,13 +51,17 @@ export default function App() {
     <div className="flex flex-col h-full">
       <div className="h-[3rem] border">
         <h2>header</h2>
-        <button
-          onClick={() => {
-            navigate(-1);
-          }}
-        >
-          Back
-        </button>
+        <div className="flex gap-2 flex-row">
+          <Link to="/">Home</Link>
+          <button
+            onClick={() => {
+              navigate(-1);
+            }}
+            type="button"
+          >
+            Back
+          </button>
+        </div>
       </div>
       <div className="flex-1 p-4">
         <div>
