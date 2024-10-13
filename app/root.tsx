@@ -5,6 +5,7 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useNavigate,
   useNavigation,
 } from "@remix-run/react";
 import type { LinksFunction } from "@remix-run/node";
@@ -45,11 +46,18 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
 export default function App() {
   const navigation = useNavigation();
+  const navigate = useNavigate();
   return (
     <div className="flex flex-col h-full">
       <div className="h-[3rem] border">
         <h2>header</h2>
-        <Link to="/">back</Link>
+        <button
+          onClick={() => {
+            navigate(-1);
+          }}
+        >
+          Back
+        </button>
       </div>
       <div className="flex-1 p-4">
         <div>
