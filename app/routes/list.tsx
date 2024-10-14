@@ -1,9 +1,9 @@
 import { json } from "@remix-run/node";
-import { userData } from "../data/user";
+import { userList } from "../data/user";
 import { useLoaderData } from "@remix-run/react";
 import UserInfo from "./user-info";
 export async function loader() {
-  return json({ list: userData });
+  return json({ list: userList });
 }
 
 const UserList = () => {

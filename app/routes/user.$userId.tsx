@@ -1,5 +1,5 @@
 import { json, useLoaderData } from "@remix-run/react";
-import { User, userData } from "../data/user";
+import { User, userList } from "../data/user";
 import UserInfo from "./user-info";
 
 export const loader = async ({ params }: { params: { userId: string } }) => {
@@ -21,7 +21,7 @@ export default function UserInfoById() {
   let user;
   const { id } = useLoaderData<typeof loader>();
   if (id) {
-    user = userData.find(
+    user = userList.find(
       (user) => user.id.toString().trim() === id.toString().trim()
     ) as User;
     if (!user)

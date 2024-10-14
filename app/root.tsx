@@ -64,23 +64,7 @@ export default function App() {
         </div>
       </div>
       <div className="flex-1 p-4">
-        <div>
-          <ul>
-            <li>
-              <Link to="/user/0">user-Nie Wang</Link>
-            </li>
-            <li>
-              <Link to="/user/1">user-Shi Hailun</Link>
-            </li>
-            <li>
-              <Link to="/user/3">user-Shi Hailun - fake</Link>
-            </li>
-            <li>
-              <Link to="/list">user-list</Link>
-            </li>
-          </ul>
-        </div>
-        <div className="relative">
+        <div className="relative w-full h-full">
           <Loading loading={navigation.state === "loading"} />
           <Outlet />
         </div>

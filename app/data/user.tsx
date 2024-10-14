@@ -5,9 +5,10 @@ export type User = {
   fullName: string;
   age: number;
   sex: "male" | "female";
+  login: boolean;
 };
 
-export const userData: User[] = [
+export const userList: User[] = [
   {
     id: "0",
     firstName: "Nie",
@@ -15,6 +16,7 @@ export const userData: User[] = [
     fullName: "Nie Wang",
     age: 29,
     sex: "male",
+    login: false,
   },
   {
     id: "1",
@@ -23,5 +25,8 @@ export const userData: User[] = [
     fullName: "Shi Hailun",
     age: 27,
     sex: "female",
+    login: false,
   },
 ];
+
+export const currentUser = {} as User;
